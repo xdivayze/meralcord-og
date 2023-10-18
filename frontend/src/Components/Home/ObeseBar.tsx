@@ -1,7 +1,8 @@
+
 const ObeseBar = (props: { text: string }) => {
   return (
-    <div>
-
+    <div className="mt-6 min-h-[10vh] w-[40%] bg-dark-clay rounded-3xl drop-shadow-xl">
+      {props.text}
     </div>
   )
 }
