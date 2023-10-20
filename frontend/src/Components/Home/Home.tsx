@@ -17,7 +17,7 @@ const Home = () => {
           </div>
           <SubmitButton />
         </div>
-        <div className="w-full md:w-[40%] md:mt-6 mt-16">
+        <div className="w-full md:w-[40%] md:mt-6 mt-16 flex md:justify-start justify-center">
           <TextSpace />
         </div>
       </div>
