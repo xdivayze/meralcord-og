@@ -1,5 +1,5 @@
 import LongBar from "./LongBar"
-import ObeseBar from "./ObeseBar"
+import { ObeseBar, TextfieldTypes } from "./ObeseBar"
 import SubmitButton from "./SubmitButton"
 import TextSpace from "./TextSpace"
 
@@ -12,10 +12,10 @@ const Home = () => {
       <div className="flex-col md:flex-row-reverse flex w-[85%] mt-16">
         <div className="md:w-[60%] w-full h-full items-center flex flex-col">
           <div className="w-full items-end flex flex-col">
-            <ObeseBar text="" />
-            <ObeseBar text="" />
+            <ObeseBar text="meral@meral.club" type={TextfieldTypes.text} />
+            <ObeseBar text="********" type={TextfieldTypes.password} />
           </div>
-          <SubmitButton />
+          <SubmitButton text="Giriş" />
         </div>
         <div className="w-full md:w-[40%] md:mt-6 mt-16 flex md:justify-start justify-center">
           <TextSpace />
