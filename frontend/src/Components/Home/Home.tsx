@@ -12,8 +12,14 @@ const Home = () => {
       <div className="flex-col md:flex-row-reverse flex w-[85%] mt-16">
         <div className="md:w-[60%] w-full h-full items-center flex flex-col">
           <div className="w-full items-end flex flex-col">
-            <ObeseBar text="meral@meral.club" type={TextfieldTypes.text} />
-            <ObeseBar text="********" type={TextfieldTypes.password} />
+            <div className="md:w-1/2 w-full">
+
+              <ObeseBar text="meral@meral.club" type={TextfieldTypes.text} />
+            </div>
+            <div className="md:w-1/2 w-full">
+
+              <ObeseBar text="********" type={TextfieldTypes.password} />
+            </div>
           </div>
           <SubmitButton text="Giriş" />
         </div>
