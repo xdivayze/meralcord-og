@@ -23,7 +23,7 @@ const Register = () => {
           <div className="w-full items-end flex flex-col">
             <ObeseBar text="meral@meral.club" type={TextfieldTypes.text} />
             <ObeseBar text="********" type={TextfieldTypes.password} />
-            <ObeseBar text="meral@meral.club" type={TextfieldTypes.text} />
+            <ObeseBar text="code de vérification" type={TextfieldTypes.text} />
           </div>
         </div>
         <div className="md:w-1/3 w-full h-full items-center flex flex-col md:order-2 order-3 ">
@@ -33,9 +33,9 @@ const Register = () => {
         </div>
         <div className="md:w-1/3 w-full h-full items-center flex flex-col md:order-3 order-2">
           <div className="w-full items-end flex flex-col">
-            <ObeseBar text="meral@meral.club" type={TextfieldTypes.text} />
-            <ObeseBar text="********" type={TextfieldTypes.password} />
-            <ObeseBar text="meral@meral.club" type={TextfieldTypes.text} />
+            <ObeseBar text="seed" type={TextfieldTypes.text} />
+            <ObeseBar text="rsapriv" type={TextfieldTypes.password} />
+            <ObeseBar text="rsapub" type={TextfieldTypes.text} />
           </div>
         </div>
 
