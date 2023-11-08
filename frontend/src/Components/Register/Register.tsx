@@ -5,8 +5,8 @@ import { SubmitButton } from "../Home/SubmitButton"
 const TextSpace = () => {
   return (
     <div className="font-roboto-slab text-gray-200 md:text-xl text-base text-left ml-5 mr-5 mt-6" >
-      <p className="indent-20">     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      <p className="indent-20">     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <p className="indent-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <p className="indent-20">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
     </div>
   )
