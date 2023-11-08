@@ -1,7 +1,16 @@
 import LongBar from "../Home/LongBar"
 import { ObeseBar, TextfieldTypes } from "../Home/ObeseBar"
-import SubmitButton from "../Home/SubmitButton"
-import TextSpace from "../Home/TextSpace"
+import { SubmitButton } from "../Home/SubmitButton"
+
+const TextSpace = () => {
+  return (
+    <div className="font-roboto-slab text-gray-200 md:text-xl text-base text-left ml-5 mr-5 mt-6" >
+      <p className="indent-20">     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <p className="indent-20">     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+    </div>
+  )
+}
 
 const Register = () => {
   return (
@@ -10,16 +19,19 @@ const Register = () => {
         <LongBar />
       </div>
       <div className="flex-col md:flex-row flex w-[85%] mt-16">
-        <div className="md:w-[70%] w-full h-full items-center flex flex-col">
+        <div className="md:w-1/3 w-full h-full items-center flex flex-col order-1">
           <div className="w-full items-end flex flex-col">
             <ObeseBar text="meral@meral.club" type={TextfieldTypes.text} />
             <ObeseBar text="********" type={TextfieldTypes.password} />
             <ObeseBar text="meral@meral.club" type={TextfieldTypes.text} />
           </div>
         </div>
-        <div className="md:w-[70%] w-full h-full items-center flex flex-col">
+        <div className="md:w-1/3 w-full h-full items-center flex flex-col md:order-2 order-3 ">
+          <TextSpace />
+
+          <SubmitButton text="Kayıt" />
         </div>
-        <div className="md:w-[70%] w-full h-full items-center flex flex-col">
+        <div className="md:w-1/3 w-full h-full items-center flex flex-col md:order-3 order-2">
           <div className="w-full items-end flex flex-col">
             <ObeseBar text="meral@meral.club" type={TextfieldTypes.text} />
             <ObeseBar text="********" type={TextfieldTypes.password} />

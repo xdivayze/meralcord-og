@@ -1,6 +1,6 @@
 import LongBar from "./LongBar"
 import { ObeseBar, TextfieldTypes } from "./ObeseBar"
-import SubmitButton from "./SubmitButton"
+import { SubmitButton, SubmitText } from "./SubmitButton"
 import TextSpace from "./TextSpace"
 
 const Home = () => {
@@ -21,7 +21,14 @@ const Home = () => {
               <ObeseBar text="********" type={TextfieldTypes.password} />
             </div>
           </div>
-          <SubmitButton text="Giriş" />
+          <div className="w-full h-full flex flex-col items-end">
+            <div className="w-full md:w-1/2 flex flex-col items-end">
+
+              <SubmitButton text="Giriş" />
+            </div>
+
+            <SubmitText prehigh="Beni cefadan bıktıran yâr" high="cefa etmekten" posthigh="bıkmaz mı?" />
+          </div>
         </div>
         <div className="w-full md:w-[40%] md:mt-6 mt-16 flex md:justify-start justify-center">
           <TextSpace />
