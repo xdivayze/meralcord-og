@@ -1,17 +1,17 @@
-import { Document, Schema } from "mongoose"
+import { Document, Schema, model } from "mongoose"
 
 interface IUser extends Document {
-  identifier: string,
-  passwordHash: string,
-  username: string,
   email: string,
+  passwordHash: string,
+  rsapub: string
 }
 
 const UserSchema = new Schema({
-  identifier: { type: String, required: true, unique: true },
   passwordHash: { type: String, required: true },
-  username: { type: String, required: true },
-  email: { type: String, required: true }
+  email: { type: String, required: true },
+  rsapub: {type: String, required: true}
 })
 
-UserSchema.pre("save",)
+const UserModel = model<IUser>("User", UserSchema)
+
+export {UserModel, IUser}

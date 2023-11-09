@@ -6,11 +6,19 @@ import * as http from 'http'
 import mongoose from 'mongoose'
 import init from './DB/init'
 
+import * as bodyParser from 'body-parser'
+import { router as UserRouter } from './DB/User/Controller'
+
 const app = express()
 app.use(express.static(path.join(__dirname, "../build/")))
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/meralcord"
 
+app.use(express.json())
+app.use(bodyParser.text())
+
+
+app.use("/api/v1/user/", UserRouter)
 init()
 
 const HTTP_PORT = 3080
