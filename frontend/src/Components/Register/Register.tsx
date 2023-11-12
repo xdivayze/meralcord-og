@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { Dispatch, SetStateAction, useState } from "react"
 import LongBar from "../Home/LongBar"
 import { ObeseBar, TextfieldTypes } from "../Home/ObeseBar"
 import { SubmitButton } from "../Home/SubmitButton"
+import { CalculateECDH } from "./Cryptography"
 
 const TextSpace = () => {
   return (
@@ -13,7 +14,16 @@ const TextSpace = () => {
   )
 }
 
-const doRegister = (regParams: { mail: string, passwd: string, cdv: string, seed: string }) => {
+const doRegister = (fieldVals: { mail: string, passwd: string, cdv: string, seed: string }, fieldFuncs: {
+  setMail: Dispatch<SetStateAction<string>>, setPasswd: Dispatch<SetStateAction<string>>
+  , setCdv: Dispatch<SetStateAction<string>>, setSeed: Dispatch<SetStateAction<string>>
+}) => {
+  const secret = CalculateECDH(fieldVals.seed)
+  localStorage.setItem("ecdhSecret", secret)
+  localStorage.setItem("ecdhSeed", fieldVals.seed)
+  Object.values(fieldFuncs).forEach((v: Dispatch<SetStateAction<string>>) => {
+    v("")
+  })
 
 }
 
