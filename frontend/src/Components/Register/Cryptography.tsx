@@ -7,4 +7,5 @@ const CalculateECDH = (seed: string): string => {
   return ecdh.getPublicKey('hex')
 }
 
+
 export { CalculateECDH }
